@@ -20,10 +20,10 @@ def load_reviews(path):
         except UnicodeDecodeError:
             continue
     raise ValueError(f"지원 인코딩으로 읽을 수 없는 파일입니다: {path}")
-
-df_moqous  = load_reviews("data\moqous_reviews.csv")
-df_titicaca = load_reviews("data\titicaca_reviews.csv")
-df_autech   = load_reviews("data\autech_reviews.csv")
+    
+df_moqous  = load_reviews("data/moqous_reviews.csv")
+df_titicaca = load_reviews("data/titicaca_reviews.csv")
+df_autech   = load_reviews("data/autech_reviews.csv")
 
 TEXT_COL = "review_text"   # 전체에서 공통으로 사용할 컬럼명
 
@@ -388,4 +388,5 @@ with tab2:
         ex_reviews_marcus_df,
         key_prefix=f"marcus_{selected_rating_marcus}_{selected_kw_marcus}"
     )
+
 
